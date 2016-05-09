@@ -17,8 +17,10 @@
   ga('send', 'pageview');
 
 
+  console.log("testing 1");
   function loadJSON(file, callback) {
 
+  console.log("testing 2");
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
     xobj.open('GET', 'http://stream.coolguyradio.com/status-json.xsl', true); // Replace 'my_data' with the path to your file
@@ -26,6 +28,7 @@
           if (xobj.readyState == 4 && xobj.status == "200") {
             // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
             callback(xobj.responseText);
+            console.log("testing 3");
           }
     };
     xobj.send(null);
@@ -33,9 +36,9 @@
 
 
 function load() {
-
+    console.log("testing 4");
     loadJSON("status-json.xsl", function(response) {
-
+        console.log("testing 5");
         var actual_JSON = JSON.parse(response);
         console.log(actual_JSON);
     });
