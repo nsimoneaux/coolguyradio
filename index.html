@@ -20,7 +20,7 @@
   function loadJSON(file, callback) {
 
     var xobj = new XMLHttpRequest();
-    xobj.overrideMimeType("text/xsl");
+    xobj.overrideMimeType("application/json");
     xobj.open('GET', 'http://stream.coolguyradio.com/status-json.xsl', true); // Replace 'my_data' with the path to your file
     xobj.onreadystatechange = function () {
           if (xobj.readyState == 4 && xobj.status == "200") {
