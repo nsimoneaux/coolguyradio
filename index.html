@@ -15,6 +15,12 @@
   ga('create', 'UA-68497008-1', 'auto');
   ga('send', 'pageview');
 
+  setInterval(function() {
+    var iframe = document.getElementById("statusframe");
+    iframe.src = iframe.src;
+}, 60 * 1000);
+
+
 </script>
   </head>
   <body>
@@ -41,7 +47,7 @@
 
 <h3>
 <a id="stream-live" class="anchor" href="#stream-live" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stream Live*</h3>
-<iframe src="http://coolguystatus.herokuapp.com"></iframe>
+<iframe src="http://coolguystatus.herokuapp.com" id="statusframe"></iframe>
 
           <p>*Regarding the live stream: If I am not live broadcasting, the stream resorts to a collection of my previously recorded music, files ranging back as far as c. 2003 to the present day, played at random. Previouly recorded Cool Guy Radio live broadcast can be found numbered and dated in the SoundCloud playlist below.</p>
 
