@@ -16,10 +16,12 @@
   ga('create', 'UA-68497008-1', 'auto');
   ga('send', 'pageview');
 
+  var statusinfo = JSON.parse(status-json);
+  var statusdiv = document.getElementById("status");
+  window.alert(statusinfo);
+
   setInterval(function() {
-    var statusinfo = JSON.parse(status-json);
-    var statusdiv = document.getElementById("status");
-    window.alert(statusinfo);
+
 }, 60 * 1000);
 
 
