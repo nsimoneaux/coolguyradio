@@ -17,7 +17,7 @@ function index() {
 
     status.innerHTML = '';
 
-    alert(data.icestats.source.server_name);
+    alert(String(data.icestats.source.server_name));
 
     if (/^Pre-Recorded.*/.test(data.icestats.source.server_name)) {
       var marquee = document.createElement("marquee")
