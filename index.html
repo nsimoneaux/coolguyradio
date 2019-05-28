@@ -2,9 +2,6 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cool Guy Radio by nsimoneaux</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cool Guy Radio</title>
     <!--<script type="text/xsl" src="http://stream.coolguyradio.com/status-json.xsl"></script>
       -->
@@ -31,11 +28,30 @@
         <h1>Cool Guy Radio</h1>
         <p>
           <strong>
-            a raspberry pi / liquidsoap / icecast internet radio station
+            a liquidsoap / icecast internet radio station
           </strong>
         </p>
-        <hr/>
       </div>
+
+      <h3>
+        <a id="stream-live"
+           class="anchor"
+           href="#stream-live"
+           aria-hidden="true">
+          <span class="octicon octicon-link"></span>
+        </a>
+        Stream Live*
+      </h3>
+      <p>
+        *Regarding the live stream: If I am not live broadcasting, the stream
+        resorts to a collection of my previously recorded broadcasts, played at random.
+      Previouly recorded Cool Guy Radio live broadcast can be found by date
+        in the Archive.org playlist below.
+      </p>
+      <div id="coolguy_status"></div>
+        <audio controls src="http://stream.coolguyradio.com/live">
+          Your browser does not support audio.
+        </audio>
 
       <h3>
         <a id="what-is-cool-guy-radio--sunglassesradio" class="anchor" href="#what-is-cool-guy-radio--sunglassesradio" aria-hidden="true">
@@ -59,38 +75,18 @@
 
       <p>
         The broadcast is captured by a
-        <a href="https://www.raspberrypi.org">Raspberry Pi</a>
-        B+ model computer, with a
-        <a href="http://www.music-group.com/Categories/Behringer/Computer-Audio/Audio-Interfaces/UCA202/p/P0484">
-          Behringer UCA202
+        <a href="https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc5i7ryh.html">Intel NUC5i7RYH</a>
+        computer, with a
+        <a href="https://tascam.com/us/product/us-4x4/top">
+          Tascam US4x4
         </a>
-        sound card for line-in. The Raspberry Pi is running
-        <a href="https://www.raspbian.org">Raspbian</a>
+        audio interface for line-in. The NUC is running
+        <a href="https://www.ubuntu.com">Ubuntu 18.04.2 Server</a>
         , with
         <a href="http://liquidsoap.fm">Liquidsoap</a>
         handling the transmission to the Icecast server.
       </p>
 
-      <h3>
-        <a id="stream-live"
-           class="anchor"
-           href="#stream-live"
-           aria-hidden="true">
-          <span class="octicon octicon-link"></span>
-        </a>
-        Stream Live*
-      </h3>
-      <p>
-        *Regarding the live stream: If I am not live broadcasting, the stream
-        resorts to a collection of my previously recorded music, files ranging
-        back as far as c. 2003 to the present day, played at random. Previouly
-        recorded Cool Guy Radio live broadcast can be found numbered and dated
-        in the Archive.org playlist below.
-      </p>
-      <div id="coolguy_status"></div>
-        <audio controls src="http://stream.coolguyradio.com/live">
-          Your browser does not support audio.
-        </audio>
 
       <h3>
         <a id="previous-recordings" class="anchor" href="#previous-recordings" aria-hidden="true">
@@ -119,9 +115,6 @@
         Much love to Michelle, my family, friends, and everyone -- and extra
         special thanks to you, for listening!
       </p>
-      <p>
-        Please explore the linked projects above!
-      </p>
 
       <h3>
         <a id="contact" class="anchor" href="#contact" aria-hidden="true">
@@ -129,7 +122,7 @@
         </a>Contact</h3>
 
       <p>
-        <a href="http://nsimoneaux.github.io">nicholas webster simoneaux</a>
+        <a href="mailto:nsimoneaux@gmail.com">nicholas webster simoneaux</a>
       </p>
     </section>
     <script type="text/javascript" src="coolguy.js"></script>
