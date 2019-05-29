@@ -34,7 +34,6 @@ function index() {
      status.appendChild(marquee);
   });
 	//*/
-  }
 }
 
 document.addEventListener('DOMContentLoaded', function (e) {
