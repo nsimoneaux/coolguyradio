@@ -32,7 +32,7 @@ function index() {
     if (arrayBoolean){
       info.forEach(function(e){
         if (e.genre === "Misc"){
-          liveCheck = true
+          liveBoolean = true
           alert(liveBoolean)
         }
       });
