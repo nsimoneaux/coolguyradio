@@ -16,8 +16,8 @@ function index() {
     var status  = document.getElementById('coolguy_status')
 
     status.innerHTML = '';
-
-    if ("live" === data.icestats.source[0].server_name) {
+	
+    if (Array.isArray(data.icestats.source) && "live" === data.icestats.source[0].server_name) {
      status.textContent = "**LIVE** ";
 
     } else {
