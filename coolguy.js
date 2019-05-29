@@ -17,14 +17,16 @@ function index() {
 
     status.innerHTML = '';
 
-    if (/^Pre-Recorded.*/.test(data.icestats.source.server_name)) {
-      var marquee = document.createElement("marquee")
+    if (/^live.*/.test(data.icestats.source.server_name)) {
+     status.textContent = "**LIVE** ";
 
+
+
+    } else {
+      var marquee = document.createElement("marquee")
       marquee.textContent = data.icestats.source.title
       marquee.setAttribute('width', '200px');
       status.appendChild(marquee);
-    } else {
-      status.textContent = "**LIVE** ";
     }
   });
 }
