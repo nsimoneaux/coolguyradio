@@ -21,14 +21,11 @@ function index() {
 
     var info = data.icestats.source
 
-    //if the source is an array, we need to access indexes.
-    var arrayBoolean = Array.isArray(info)
-
     //if the genre:"misc" is present, the live stream is available.
     //otherwise, print the name of the file from the pre-recorded stream.
 
     //if the arrayBoolean is true, for each item in the array, check if "Misc" is a value.
-    if (arrayBoolean){
+    if (Array.isArray(info)){
       info.forEach(function(e){
         if (e.genre === "Misc"){
           //display to viewer the live status.
