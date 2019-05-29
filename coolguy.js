@@ -20,34 +20,40 @@ function index() {
     var intro = "Previous recording:  ";
 
     var info = data.icestats.source
-    //if the genre:"misc" is present, the live stream is available.
-    //otherwise, print the name of the file from the pre-recorded stream.
+    var livePresent
 
-    //if the arrayBoolean is true, for each item in the array, check if "Misc" is a value.
-    if (Array.isArray(info)){
-      info.forEach(function(e){
-        if (e.genre === "Misc"){
-          //display to viewer the live status.
+    if(info){
+      if (Array.isArray(info)){
+        info.forEach(function(e){
+          if (e.genre === "Misc"){
+            status.textContent = "**LIVE** ";
+            livePresent = true
+            }
+          });
+        }
+        else if (Array.isArray(info) && !(livePresent)){
+          info.forEach(function(e){
+            if (e.genre === "various"){
+              marquee.textContent = intro.concat(e.title);
+              marquee.setAttribute('width', '200px');
+              status.appendChild(marquee);
+            }
+          });
+        }
+        else if(info.genre && info.genre === "Misc"){
           status.textContent = "**LIVE** ";
-          }
-        else if(e.genre === "various"){
-          marquee.textContent = intro.concat(e.title);
+        }
+        else if(info.genre && info.genre === "various"){
+          marquee.textContent = intro.concat(info.title);
           marquee.setAttribute('width', '200px');
           status.appendChild(marquee);
         }
-        });
-    }else{
-      if(info.genre === "Misc"){
-       status.textContent = "**LIVE** ";
       }
-      else if(info.genre === "various"){
-        marquee.textContent = intro.concat(info.title);
-        marquee.setAttribute('width', '200px');
-        status.appendChild(marquee);
-      }else{
+      else{
         status.textContent = "Server Error: BIG PROBLEM!"
       }
-    });
+    }
+  );
 }
 
 document.addEventListener('DOMContentLoaded', function (e){
