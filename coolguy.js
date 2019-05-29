@@ -23,7 +23,7 @@ function index() {
     } else {
       var marquee = document.createElement("marquee");
       var intro = "Playing previously recorded show ";
-	marquee.textContent = intro.append(data.icestats.source[1].title);
+	marquee.textContent = intro.concat(data.icestats.source[1].title);
       marquee.setAttribute('width', '200px');
       status.appendChild(marquee);
     }
