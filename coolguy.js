@@ -20,8 +20,6 @@ function index() {
     if ("live" === data.icestats.source[0].server_name) {
      status.textContent = "**LIVE** ";
 
-
-
     } else {
       var marquee = document.createElement("marquee")
       marquee.textContent = data.icestats.source[1].title
