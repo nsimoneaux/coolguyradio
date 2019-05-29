@@ -22,7 +22,8 @@ function index() {
 
     } else {
       var marquee = document.createElement("marquee")
-      marquee.textContent = data.icestats.source[1].title
+      marquee.textContent = "Playing previously recorded show ".
+		append(data.icestats.source[1].title)
       marquee.setAttribute('width', '200px');
       status.appendChild(marquee);
     }
