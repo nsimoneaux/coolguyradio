@@ -16,7 +16,7 @@ function index() {
     var status  = document.getElementById('coolguy_status')
 
     status.innerHTML = '';
-/*  var info = data.icestats.source
+    var info = data.icestats.sourc
     var marquee = document.createElement("marquee");
     var intro = "Previous recording:  ";
 
@@ -33,7 +33,6 @@ function index() {
      marquee.setATtribute('width', '200px');
      status.appendChild(marquee);
   });
-	*/
 }
 
 document.addEventListener('DOMContentLoaded', function (e) {
