@@ -22,37 +22,36 @@ function index() {
     var info = data.icestats.source
     var livePresent
 
-    if(info){
-      if (Array.isArray(info)){
-        info.forEach(function(e){
-          if (e.genre === "Misc"){
-            status.textContent = "**LIVE** ";
-            livePresent = true
-            }
-          });
-        }
-        else if (Array.isArray(info) && !(livePresent)){
-          info.forEach(function(e){
-            if (e.genre === "various"){
-              marquee.textContent = intro.concat(e.title);
-              marquee.setAttribute('width', '200px');
-              status.appendChild(marquee);
-            }
-          });
-        }
-        else if(info.genre && info.genre === "Misc"){
-          status.textContent = "**LIVE** ";
-        }
-        else if(info.genre && info.genre === "various"){
-          marquee.textContent = intro.concat(info.title);
+    infoString = ''
+    infoString.concat(JSON.stringify(info));
+
+    if(infoString.includes("Misc")){
+      status.textContent = "**LIVE** ";
+      livePresent = true
+    }
+    else if(Array.isArray(info) && !(livePresent)){
+      info.forEach(function(e){
+        if (e.genre === "various"){
+          marquee.textContent = intro.concat(e.title);
           marquee.setAttribute('width', '200px');
           status.appendChild(marquee);
         }
+      });
+    }
+
+    else{
+      try{
+        marquee.textContent = intro.concat(info.title);
+        marquee.setAttribute('width', '200px');
+        status.appendChild(marquee);
       }
-      else{
-        status.textContent = "Server Error: BIG PROBLEM!"
+      catch(e){
+        marquee.textContent = "Server Status: Big Problem!";
+        marquee.setAttribute('width', '200px');
+        status.appendChild(marquee);
       }
     }
+  }
   );
 }
 
