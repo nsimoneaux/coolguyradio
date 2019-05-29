@@ -22,22 +22,22 @@ function index() {
     var info = data.icestats.source
 
     //if the source is an array, we need to access indexes.
-    var arrayCheck = Array.isArray(info)
-    var liveCheck
+    var arrayBoolean = Array.isArray(info)
+    var liveBoolean
 
     //if the genre:"misc" is present, the live stream is available.
     //otherwise, print the name of the file from the pre-recorded stream.
 
-    //if the arrayCheck is true, for each item in the array, check if "Misc" is a value.
-    if (arrayCheck){
+    //if the arrayBoolean is true, for each item in the array, check if "Misc" is a value.
+    if (arrayBoolean){
       info.forEach(function(e){
         if (e.genre === "Misc"){
           liveCheck = true
-          alert(liveCheck)
+          alert(liveBoolean)
         }
       });
     }
-    else if (arrayCheck && ) {
+    else if (arrayBoolean) {
       marquee.textContent = intro.concat(info.title);
       marquee.setAttribute('width', '200px');
       status.appendChild(marquee);
