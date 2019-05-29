@@ -29,9 +29,8 @@ function index() {
         if (e.genre === "Misc"){
           //display to viewer the live status.
           status.textContent = "**LIVE** ";
-          break;
           }
-        else if{
+        else if(e.genre === "various"){
           marquee.textContent = intro.concat(e.title);
           marquee.setAttribute('width', '200px');
           status.appendChild(marquee);
