@@ -23,7 +23,6 @@ function index() {
 
     //if the source is an array, we need to access indexes.
     var arrayBoolean = Array.isArray(info)
-    var liveBoolean
 
     //if the genre:"misc" is present, the live stream is available.
     //otherwise, print the name of the file from the pre-recorded stream.
@@ -32,19 +31,17 @@ function index() {
     if (arrayBoolean){
       info.forEach(function(e){
         if (e.genre === "Misc"){
+          //display to viewer the live status.
           status.textContent = "**LIVE** ";
-        }else if(e.genre === "Various"){
-          marquee.textContent = intro.concat(e.title);
-          marquee.setAttribute('width', '200px');
-          status.appendChild(marquee);
-        }
-      });
+        });
     }
-     else{
+     else if(info.genre === "Misc"){
+       status.textContent = "**LIVE** ";
+     }else{
      marquee.textContent = intro.concat(info.title);
      marquee.setAttribute('width', '200px');
      status.appendChild(marquee);
-  }
+    }
 });
 }
 
