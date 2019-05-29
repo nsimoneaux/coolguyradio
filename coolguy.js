@@ -32,8 +32,7 @@ function index() {
      marquee.textContent = intro.concat(info[1].title);
      marquee.setATtribute('width', '200px');
      status.appendChild(marquee);
-  });
-	//*/
+  };
 }
 
 document.addEventListener('DOMContentLoaded', function (e) {
