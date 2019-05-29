@@ -23,7 +23,7 @@ function index() {
     var livePresent
 
     infoString = ''
-    infoString.concat(JSON.stringify(info));
+    infoString = infoString.concat(JSON.stringify(info));
 
     if(infoString.includes("Misc")){
       status.textContent = "**LIVE** ";
