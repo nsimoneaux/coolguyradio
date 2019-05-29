@@ -24,7 +24,7 @@ function index() {
     if (Array.isArray(info) && "live" === info[0].server_name) {
      status.textContent = "**LIVE** ";
 
-    } else if (!Array.isArray(info) {
+    } else if (!Array.isArray(info)) {
       marquee.textContent = intro.concat(info.title);
       marquee.setAttribute('width', '200px');
       status.appendChild(marquee);
