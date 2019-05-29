@@ -24,7 +24,7 @@ function index() {
 
     } else {
       var marquee = document.createElement("marquee")
-      marquee.textContent = data.icestats.source[0].title
+      marquee.textContent = data.icestats.source[1].title
       marquee.setAttribute('width', '200px');
       status.appendChild(marquee);
     }
