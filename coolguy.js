@@ -21,7 +21,7 @@ function index() {
      status.textContent = "**LIVE** ";
 
     } else {
-      var marquee = document.createElement("marquee")
+      var marquee = document.createElement("marquee");
       str intro = "Playing previously recorded show ";
 	marquee.textContent = intro.append(data.icestats.source[1].title);
       marquee.setAttribute('width', '200px');
