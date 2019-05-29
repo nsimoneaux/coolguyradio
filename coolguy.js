@@ -17,16 +17,21 @@ function index() {
 
     status.innerHTML = '';
 	
-    if (Array.isArray(data.icestats.source) && "live" === data.icestats.source[0].server_name) {
+    var info = data.icestats.source
+    var marquee = document.createElement("marquee");
+    var intro = "Previous recording:  ";
+
+    if (Array.isArray(info) && "live" === info[0].server_name) {
      status.textContent = "**LIVE** ";
 
-    } else {
-      var marquee = document.createElement("marquee");
-      var intro = "Previous recording:  ";
-	marquee.textContent = intro.concat(data.icestats.source[1].title);
+    } else if (!Array.isArray(info) {
+      marquee.textContent = intro.concat(info.title);
       marquee.setAttribute('width', '200px');
       status.appendChild(marquee);
-    }
+    }else{
+     marquee.textContent = intro.concat(info[1].title);
+     marquee.setATtribute('width', '200px');
+     status.appendChild(marquee);
   });
 }
 
