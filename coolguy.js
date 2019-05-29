@@ -17,7 +17,7 @@ function index() {
 
     status.innerHTML = '';
 
-    if ("live".equals(data.icestats.source[0].server_name)) {
+    if ("live" === data.icestats.source[0].server_name) {
      status.textContent = "**LIVE** ";
 
 
