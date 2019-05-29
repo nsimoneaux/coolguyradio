@@ -30,6 +30,7 @@ function index() {
         if (e.genre === "Misc"){
           //display to viewer the live status.
           status.textContent = "**LIVE** ";
+          }
         });
     }
      else if(info.genre === "Misc"){
