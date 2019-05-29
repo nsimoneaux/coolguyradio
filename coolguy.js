@@ -11,7 +11,7 @@ function loadJSON(file, callback) {
 }
 
 function index() {
-  loadJSON('http://stream.coolguyradio.com/status-json.xsl', function(response) {
+  loadJSON('http://stream.coolguyradio.com/status-json.xsl', function(response)) {
     var data    = JSON.parse(response);
     var status  = document.getElementById('coolguy_status')
 
@@ -30,7 +30,7 @@ function index() {
     }
      else{
      marquee.textContent = intro.concat(info[1].title);
-     marquee.setATtribute('width', '200px');
+     marquee.setAttribute('width', '200px');
      status.appendChild(marquee);
   };
 }
