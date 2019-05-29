@@ -36,19 +36,18 @@ function index() {
           status.appendChild(marquee);
         }
         });
-    }
-     else if(info.genre === "Misc"){
+    }else{
+      if(info.genre === "Misc"){
        status.textContent = "**LIVE** ";
-     }
-     else if(info.genre === "various"){
-     marquee.textContent = intro.concat(info.title);
-     marquee.setAttribute('width', '200px');
-     status.appendChild(marquee);
-    }
-    else{
-      status.textContent = "Server Error: BIG PROBLEM!"
-    }
-});
+      }
+      else if(info.genre === "various"){
+        marquee.textContent = intro.concat(info.title);
+        marquee.setAttribute('width', '200px');
+        status.appendChild(marquee);
+      }else{
+        status.textContent = "Server Error: BIG PROBLEM!"
+      }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', function (e){
