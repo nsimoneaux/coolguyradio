@@ -20,7 +20,6 @@ function index() {
     var intro = "Previous recording:  ";
 
     var info = data.icestats.source
-
     //if the genre:"misc" is present, the live stream is available.
     //otherwise, print the name of the file from the pre-recorded stream.
 
@@ -30,15 +29,25 @@ function index() {
         if (e.genre === "Misc"){
           //display to viewer the live status.
           status.textContent = "**LIVE** ";
+          break;
           }
+        else if{
+          marquee.textContent = intro.concat(e.title);
+          marquee.setAttribute('width', '200px');
+          status.appendChild(marquee);
+        }
         });
     }
      else if(info.genre === "Misc"){
        status.textContent = "**LIVE** ";
-     }else{
+     }
+     else if(info.genre === "various"){
      marquee.textContent = intro.concat(info.title);
      marquee.setAttribute('width', '200px');
      status.appendChild(marquee);
+    }
+    else{
+      status.textContent = "Server Error: BIG PROBLEM!"
     }
 });
 }
