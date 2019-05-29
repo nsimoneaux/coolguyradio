@@ -16,9 +16,11 @@ function index() {
     var status  = document.getElementById('coolguy_status')
 
     status.innerHTML = '';
-    var info = data.icestats.source
     var marquee = document.createElement("marquee");
     var intro = "Previous recording:  ";
+
+    var info = data.icestats.source
+
 
     if (Array.isArray(info) && "live" === info[0].server_name) {
      status.textContent = "**LIVE** ";
