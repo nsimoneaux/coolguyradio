@@ -32,18 +32,16 @@ function index() {
     if (arrayBoolean){
       info.forEach(function(e){
         if (e.genre === "Misc"){
-          liveBoolean = true
-          alert(liveBoolean)
+          status.textContent = "**LIVE** ";
+        }else if(e.genre === "Various"){
+          marquee.textContent = intro.concat(e.title);
+          marquee.setAttribute('width', '200px');
+          status.appendChild(marquee);
         }
       });
     }
-    else if (arrayBoolean) {
-      marquee.textContent = intro.concat(info.title);
-      marquee.setAttribute('width', '200px');
-      status.appendChild(marquee);
-    }
      else{
-     marquee.textContent = intro.concat(info[1].title);
+     marquee.textContent = intro.concat(info.title);
      marquee.setAttribute('width', '200px');
      status.appendChild(marquee);
   }
