@@ -35,7 +35,7 @@ function index() {
   };
 }
 
-document.addEventListener('DOMContentLoaded', function (e) {
+document.addEventListener('DOMContentLoaded', function (e)) {
   index();
 
   // refresh
