@@ -35,7 +35,7 @@ function index() {
           liveCheck = true
           alert(liveCheck)
         }
-      })
+      });
     }
     else if (arrayCheck && ) {
       marquee.textContent = intro.concat(info.title);
