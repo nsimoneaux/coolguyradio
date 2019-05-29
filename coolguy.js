@@ -17,14 +17,14 @@ function index() {
 
     status.innerHTML = '';
 
-    if (/^live.*/.test(data.icestats.source.server_name)) {
+    if (/^live.*/.test(data.icestats.source[0].server_name)) {
      status.textContent = "**LIVE** ";
 
 
 
     } else {
       var marquee = document.createElement("marquee")
-      marquee.textContent = data.icestats.source.title
+      marquee.textContent = data.icestats.source[0].title
       marquee.setAttribute('width', '200px');
       status.appendChild(marquee);
     }
