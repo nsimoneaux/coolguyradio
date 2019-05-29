@@ -16,13 +16,13 @@ function index() {
     var status  = document.getElementById('coolguy_status')
 
     status.innerHTML = '';
-/*  var info = data.icestats.source
+    var info = data.icestats.source
     var marquee = document.createElement("marquee");
     var intro = "Previous recording:  ";
 
     if (Array.isArray(info) && "live" === info[0].server_name) {
      status.textContent = "**LIVE** ";
-    } 
+    }
     else if (!Array.isArray(info)) {
       marquee.textContent = intro.concat(info.title);
       marquee.setAttribute('width', '200px');
@@ -33,7 +33,8 @@ function index() {
      marquee.setATtribute('width', '200px');
      status.appendChild(marquee);
   });
-	*/
+	//*/
+  }
 }
 
 document.addEventListener('DOMContentLoaded', function (e) {
