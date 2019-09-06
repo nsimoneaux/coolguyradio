@@ -24,60 +24,50 @@
 	a:active {
   	color: #ffdbd4;
 	} 
+	.content {
+	max-width: 60%;
+	margin: auto;
+	text-align:center;
+	background-color: black;
+	}
+	img{
+	align:middle;
+	margin: auto;
+	}
+	
 	</style>
-  </head>
-  <body>
-    <div id="header">
-      <nav>
-      </nav>
-    </div>
-
-
-    <section>
-      <div id="title">
-        <h1>Cool Guy Radio</h1>
+<body>
+<div class="content">
+  <h1>Cool Guy Radio</h1>
       <h3>
         <p>
           <strong>
             a liquidsoap / icecast internet radio station
           </strong>
         </p>
-      </div>
 
-	<img src="coolguy_dolph1.jpg" width="300" height="300">
+	<img src="coolguy_dolph1.jpg" width="40%">
 <h4>Artwork by <a href="https://www.instagram.com/illustratingadventures/">Dan Hood</a></h4>
-      <h3>
-        <a id="stream-live"
-           class="anchor"
-           href="#stream-live"
-           aria-hidden="true">
-          <span class="octicon octicon-link"></span>
-        </a>
-        Stream Live*
-      </h3>
-      <div id="coolguy_status"></div>
-        <audio controls src="http://stream.coolguyradio.com/live">
+<h3>Stream Live*</h3>
+<div id="coolguy_status"><marquee width="500px">Previous recording:  piano.2019.08.04-1719.10</marquee></div>
+<audio controls="" src="http://stream.coolguyradio.com/live">
           Your browser does not support audio.
         </audio>
-        <p>*If not live, a randomly selected previously recorded show will play.
+                <p>*If not live, a randomly selected previously recorded show will play.
 	</p>
           <p> 
         Archives are available in the Archive.org playlists below.
-        </p>
+          </p>
 	
 	<h3>Stream URL</h3>
 	<h3><a href="http://stream.coolguyradio.com/live">
 		http://stream.coolguyradio.com/live</a></h3>
 	<hr>
-
-      <h3>
-        <a id="what-is-cool-guy-radio" class="anchor" href="#what-is-cool-guy-radio" aria-hidden="true">
-        </a>
-        What is "Cool Guy Radio"?
+    <h3>What is "Cool Guy Radio"?
       </h3>
-
-      <p>
-        Cool Guy Radio is an Internet Radio Station. The live broadcast is
+    <details>
+     <summary>
+        Cool Guy Radio is an Internet Radio Station.</summary> <p>The live broadcast is
         served by a
         <a href="https://www.digitalocean.com">Digital Ocean</a>
         Droplet running
@@ -99,14 +89,18 @@
         <a href="http://liquidsoap.fm">Liquidsoap</a>
         handling the transmission to the Icecast server.
       </p>
-
+    </details>
+    <hr>
       <h3>Updates</h3>
       <h4>05.09.2019</h4>
-      <p>Some changes to the setup. A <a href="https://en.wikipedia.org/wiki/Avid_Audio">Digidesign</a> <a href="http://avid.force.com/pkb/articles/en_US/user_guide/en365811">MBox</a> (a gift from Alex Hemard) to capture the audio from the Boss RC-1. The Tascam has been moved to serve as a preamp/mixer for the rest of the signal chain. I am also using a <a href="https://en.wikipedia.org/wiki/Marantz">Marantz</a> <a href="https://www.hifiengine.com/manual_library/marantz/eq-20.shtml">EQ-20</a> after the Tascam. The equalizer is an inheritance from my uncle, Evans.</P>
-      <p>Additionally, I have added the output of a related project in the the library of previous recordings. The recordings are made on the with the setup detailed here: <a href="https://archive.org/details/nws.piano">nws.piano</a>. I have also added the embedded player for those files below.</p>
+      <details>
+      <summary>Some changes to the setup & added a new project.</summary><p> A <a href="https://en.wikipedia.org/wiki/Avid_Audio">Digidesign</a> <a href="http://avid.force.com/pkb/articles/en_US/user_guide/en365811">MBox</a> (a gift from Alex Hemard) to capture the audio from the Boss RC-1. The Tascam has been moved to serve as a preamp/mixer for the rest of the signal chain. I am also using a <a href="https://en.wikipedia.org/wiki/Marantz">Marantz</a> <a href="https://www.hifiengine.com/manual_library/marantz/eq-20.shtml">EQ-20</a> after the Tascam. The equalizer is an inheritance from my uncle, Evans.</P>
+      <p>Additionally, I have added the output of a related project in the the library of previous recordings. The recordings are made on the with the setup detailed here: <a href="https://archive.org/details/nws.piano">nws.piano</a>. I have also added the embedded player for those files below.</p></details>
       <h4>28.05.2019</h4>
-      <p>I edited the site to reflect newest changes.
-        <ul>
+      <details>
+      <summary>I edited the site to reflect newest changes.</summary>
+      <p>
+      <ul>
 	  <li>Broadcast relocated from Denver, CO to New Orleans, LA.
           <li>Switched from Raspberry Pi to Intel NUC.</li>
           <li>Creating new archive playlist to reflect change in gear.</li>
@@ -127,7 +121,7 @@
 	 </ul>
         </ul>
       </p>
-
+</details>
 <hr>
 
       <h3>
@@ -136,21 +130,16 @@
         </a>
         Previous Recordings
       </h3>
+	
       <h4>Volume 2: 'infinityl00ps' (2019 - )</h4>
 	<h4><a href="https://archive.org/details/infinityl00ps">https://archive.org/details/infinityl00ps</a></h4>
-	<iframe src="https://archive.org/embed/infinityl00ps&playlist=1" width="500" height="300" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe
       <h4>nws.piano (2019 - )</h4>
       <h4><a href="https://archive.org/details/nws.piano">https://archive.org/details/nws.piano</a></h4>
-	<iframe src="https://archive.org/embed/nws.piano&playlist=1" width="500" height="300" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 	<h4>Volume 1: CoolGuyRadio (2015 - 2017)</h4>
-	<h4><a href="https://archive.org/details/CoolGuyRadio">https://archive.org/details/CoolGuyRadio</a></h4>
-        <iframe src="https://archive.org/embed/CoolGuyRadio&playlist=1" width="500" height="300" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe><hr>	
-        <a id="special-thanks"
-           class="anchor"
-           href="#special-thanks"
-           aria-hidden="true">
-          <span class="octicon octicon-link"></span>
-        </a>
+  <h4><a href="https://archive.org/details/CoolGuyRadio">https://archive.org/details/CoolGuyRadio</a></h4>
+</ul>
+      <hr>
+      <h3>
         Special Thanks
       </h3>
 
@@ -164,14 +153,12 @@
       </p>
 
       <h3>
-        <a id="contact" class="anchor" href="#contact" aria-hidden="true">
-          <span class="octicon octicon-link"></span>
         </a>Contact</h3>
 
       <p>
         <a href="mailto:nsimoneaux@gmail.com">nicholas webster simoneaux</a>
       </p>
-    </section>
+      </div>
     <script type="text/javascript" src="coolguy.js"></script>
-  </body>
+</body>
 </html>
