@@ -101,9 +101,6 @@
       </p>
 
       <h3>Updates</h3>
-      <h4>05.09.2019</h4>
-      <p>Some changes to the setup. A<a href="https://en.wikipedia.org/wiki/Avid_Audio">Digidesign</a> <a href="http://avid.force.com/pkb/articles/en_US/user_guide/en365811">MBox</a> (a gift from Alex Hemard) to capture the audio from the Boss RC-1. The Tascam has been moved to serve as a preamp/mixer for the rest of the signal chain. I am also using a <a href="https://en.wikipedia.org/wiki/Marantz">Marantz</a> <a href="https://www.hifiengine.com/manual_library/marantz/eq-20.shtml">EQ-20</a> after the Tascam. The equalizer is an inheritance from my uncle, Evans.</P>
-      <p>Additionally, I have added the output of a related project in the the library of previous recordings. The recordings are made on the with the setup detailed here: <a href="https://archive.org/details/nws.piano">nws.piano</a>. I have also added the embedded player for those files below.</p>
       <h4>28.05.2019</h4>
       <p>I edited the site to reflect newest changes.
         <ul>
@@ -136,11 +133,7 @@
         </a>
         Previous Recordings
       </h3>
-
-      <h4>nws.piano</h4>
-      <h4><a href="https://archive.org/details/nws.piano">https://archive.org/details/nws.piano</a></h4>
-	<iframe src="https://archive.org/embed/nws.piano&playlist=1" width="500" height="300" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
-      <h4>Volume 2: 'infinityl00ps' (2019 - ????)</h4>
+	<h4>Volume 2: 'infinityl00ps' (2019 - ????)</h4>
 	<h4><a href="https://archive.org/details/infinityl00ps">https://archive.org/details/infinityl00ps</a></h4>
 	<iframe src="https://archive.org/embed/infinityl00ps&playlist=1" width="500" height="300" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 	<h4>Volume 1: CoolGuyRadio (2015 - 2017)</h4>
