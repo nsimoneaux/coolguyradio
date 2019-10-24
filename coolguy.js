@@ -25,8 +25,12 @@ function index() {
     infoString = ''
     infoString = infoString.concat(JSON.stringify(info));
 
-    if(infoString.includes("Misc")){
-      status.textContent = "**LIVE** ";
+    if(infoString.includes("Piano")){
+      status.textContent = "**LIVE PIANO BROADCAST** ";
+      livePresent = true
+    }
+    else if(infoString.includes("Living")){
+      status.textContent = "**LIVE LIVING ROOM BROADCAST** ";
       livePresent = true
     }
     else if(Array.isArray(info) && !(livePresent)){
